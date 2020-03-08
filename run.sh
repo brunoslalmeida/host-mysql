@@ -1,7 +1,7 @@
 #!/bin/bash
 docker stop mysql
 
-docker run -d --rm \
+docker run -d \
         --hostname mysql \
         --name mysql \
         --network internal \
