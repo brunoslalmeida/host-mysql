@@ -1,4 +1,6 @@
 #!/bin/bash
+cwd=$(pwd)
+
 docker stop mysql
 
 docker run -d \
@@ -7,5 +9,5 @@ docker run -d \
         --network internal \
         --restart=always \
         -e MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD \
-        -v /var/lib/mysql:/var/lib/mysql \
+        -v $cwd/var/lib/mysql:/var/lib/mysql \
         mysql:5
