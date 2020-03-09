@@ -2,6 +2,7 @@
 cwd=$(pwd)
 
 docker stop mysql
+docker rm mysql
 
 docker run -d \
         --hostname mysql \
